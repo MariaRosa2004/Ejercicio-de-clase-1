@@ -26,11 +26,9 @@ class sistema():
         p.asignarGenero(genero)
         p.asignarServicio(servicio)
 
-        self
-        
+        self.__lista_pacientes.append(p)
+        self.__numero_pacientes=len(self.__lista_paciente)
 
-
-   
     #Getters
     def VerNombre(self):
         return self.__nombre
@@ -42,6 +40,8 @@ class sistema():
         return self.__servicio
     def VernumPacientes(self):
         return self.__numero_pacientes
+    def VerdatosPacientes(self):
+        cedula=
 
     
 class paciente(sistema):
