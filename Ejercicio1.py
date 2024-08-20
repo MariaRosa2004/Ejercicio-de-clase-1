@@ -28,7 +28,7 @@ class sistema():
 
         self.__lista_pacientes.append(p)
         self.__numero_pacientes=len(self.__lista_paciente)
-
+#Tener en cuenta usar la funcion magica de string 
     #Getters
     def VerNombre(self):
         return self.__nombre
@@ -73,6 +73,18 @@ p1.asignarGenero('Mujer')
 print(p1.VerCedula())
 
 
-#Ciclo menu
-while True:
-    pass
+def main():
+    sis=sistema()
+
+    while True:
+        opcion=int(input('''
+Ingrese:
+                         0.Salir
+                         1.Ingresar paciente
+                         2.Ver pacientes
+                         '''))
+        if opcion==1:
+            print('A continuacion Se solicitaran los datos:')
+
+if __name__=='__main__':
+    
