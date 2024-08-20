@@ -1,9 +1,9 @@
 class sistema():
     def __init__(self):
-        self.__cedula= 0
-        self.__nombre= ''
-        self.__genero= ''
+       self.__lista_paciente=[]
+       self.__numero_pacientes=len(self.__lista_paciente)
 #Duda- ¿Por que no se asignan en el mismo init?
+    
     #Setters
     def asignarNombre(self,nombre):
         self.__nombre=nombre
@@ -11,7 +11,26 @@ class sistema():
         self.__cedula=cedula
     def asignarGenero(self,genero):
         self.__genero=genero
-    
+    def asignarServicio(self,servicio):
+        self.__servicio=servicio
+
+    def IngresarPaciente(self):
+        nombre=input('Ingrese nombre')
+        cedula=int(input('Ingresar cedula'))
+        genero=input('Ingresar genero')
+        servicio=input('Ingrese servicio')
+
+        p=paciente()
+        p.asignarNombre(nombre)
+        p.asignarCedula(cedula)
+        p.asignarGenero(genero)
+        p.asignarServicio(servicio)
+
+        self
+        
+
+
+   
     #Getters
     def VerNombre(self):
         return self.__nombre
@@ -19,6 +38,11 @@ class sistema():
         return self.__cedula
     def VerGenero(self):
         return self.__genero
+    def VerServicio(self):
+        return self.__servicio
+    def VernumPacientes(self):
+        return self.__numero_pacientes
+
     
 class paciente(sistema):
     def  __init__(self,nom, ced, gen, serv):
