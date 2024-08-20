@@ -49,3 +49,6 @@ p1.asignarGenero('Mujer')
 print(p1.VerCedula())
 
 
+#Ciclo menu
+while True:
+    pass
